@@ -256,31 +256,35 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form>
+            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+              <strong>Thank you for ordering!</strong> We'll send you an email for payment <i class="bi bi-emoji-smile"></i>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="wpu-contact-form">
               <div class="col mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
               </div>
               <div class="col mb-3">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
+                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
                 <div id="email" class="form-text fw-light">We'll never share your email with anyone. We'll send you an email for payment.</div>
               </div>
               <div class="col mb-3">
                 <label for="address" class="form-label">Address</label>
-                <input type="text" class="form-control fw-light" id="address" placeholder="Area, sub-district, postal code" />
+                <input type="text" class="form-control fw-light" id="address" placeholder="Area, sub-district, postal code" name="alamat" />
               </div>
               <div class="col mb-3">
                 <label for="otherdetails" class="form-label">Other Details</label>
-                <input type="text" class="form-control fw-light" id="otherdetail" placeholder="Apartment, studio, house number, or floor" />
+                <input type="text" class="form-control fw-light" id="otherdetail" placeholder="Apartment, studio, house number, or floor" name="detail lainnya" />
               </div>
               <div class="col mb-3">
                 <label for="city" class="form-label">City</label>
-                <input type="text" class="form-control fw-light" id="city" />
+                <input type="text" class="form-control fw-light" id="city" name="kota" />
               </div>
               <div class="col-md mb-3">
                 <label for="inputState" class="form-label">State</label>
-                <select id="inputState" class="form-select fw-light">
+                <select id="inputState" class="form-select fw-light" name="negara">
                   <option selected>Choose...</option>
                   <option>Indonesia</option>
                   <option>Philippines</option>
@@ -295,13 +299,19 @@
               <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
                 <p class="form-text fw-light">Write down for your order, please.</p>
-                <textarea class="form-control fw-light" id="message" rows="3" placeholder="3 = Standing Doll Medium"></textarea>
+                <textarea class="form-control fw-light" id="message" rows="3" placeholder="3 = Standing Doll Medium" name="pesan"></textarea>
               </div>
               <div class="mb-3 form-check">
+                <p class="fw-light">Please, make sure your data is correct.</p>
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" />
                 <label class="form-check-label" for="exampleCheck1">The data is correct</label>
               </div>
-              <button type="submit" class="btn text-white" style="background-color: #01348e">Submit</button>
+              <button type="submit" class="btn text-white btn-submit" style="background-color: #01348e">Submit</button>
+
+              <button class="btn text-white btn-loading d-none" type="button" style="background-color: #01348e" disabled>
+                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                <span role="status">Loading...</span>
+              </button>
             </form>
           </div>
         </div>
@@ -322,5 +332,32 @@
     </footer>
     <!-- Akhir Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzBhz2wsKU9psIfPqo0iIdOsGqLWkZs4O3QYVvxE8-Z1LjIrFak5Oo4o2YuDyyCgTLNDg/exec';
+      const form = document.forms['wpu-contact-form'];
+      const btnSubmit = document.querySelector('.btn-submit');
+      const btnLoading = document.querySelector('.btn-loading');
+      const myAlert = document.querySelector('.my-alert');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // ketika tombol submit diklik
+        // tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle('d-none');
+        btnSubmit.classList.toggle('d-none');
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => {
+            // tampilkan tombol submit, hilangkan tombol loading
+            btnLoading.classList.toggle('d-none');
+            btnSubmit.classList.toggle('d-none');
+            // tampilkan alert
+            myAlert.classList.toggle('d-none');
+            // reset formnya
+            form.reset();
+            console.log('Success!', response);
+          })
+          .catch((error) => console.error('Error!', error.message));
+      });
+    </script>
   </body>
 </html>
