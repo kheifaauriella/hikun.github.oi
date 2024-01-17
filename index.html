@@ -11,6 +11,9 @@
     <!-- Boostrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -31,7 +34,7 @@
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#Gallery">Gallery</a>
+              <a class="nav-link" href="#gallery">Gallery</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
@@ -44,11 +47,11 @@
 
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
-      <img src="img/hikun.jpg" alt="Hikun" width="200" class="rounded-circle mb-3" />
+      <img src="img/hikun.jpg" alt="Hikun" width="200" class="rounded-circle mb-3 img-thumbnail" data-aos="flip-left" />
       <h1 class="display-4 fw-bold">HIKUN</h1>
       <p class="lead">A Doll | TRUZZ | Keyring</p>
       <br />
-      <p>TRUZ ("True Friends") is a group of characters created by TREASURE in collaboration with LINE FRIENDS through the LINE FRIENDS CREATOR project.</p>
+      <p class="p-1"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -68,10 +71,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1500">
             <p>HIKUN's first impression might be a little cold, but don't you worry. Once you get close, being best friends with HIKUN is a piece of cake!</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300">
             <p>HIKUN's numerous expressions will cheer you up anytime. From humorous ones to touchy-feely ones it is no doubt that HIKUN is charming.</p>
           </div>
         </div>
@@ -87,7 +90,7 @@
     <!-- Akhir About -->
 
     <!-- Gallery -->
-    <section id="Gallery">
+    <section id="gallery">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
@@ -98,7 +101,7 @@
         <div class="row justify-content-center">
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/3-fb.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/3-fb.jpg" class="card-img-top gallery-img" alt="gambar 1" />
               <div class="card-body">
                 <p class="card-text text-center">Front view</p>
               </div>
@@ -106,7 +109,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/2-b.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/2-b.jpg" class="card-img-top gallery-img" alt="gambar 2" />
               <div class="card-body">
                 <p class="card-text text-center">Rear view</p>
               </div>
@@ -114,7 +117,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/4-r.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/4-r.jpg" class="card-img-top gallery-img" alt="gambar 3" />
               <div class="card-body">
                 <p class="card-text text-center">Side veiw</p>
               </div>
@@ -122,7 +125,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/5-s.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/5-s.jpg" class="card-img-top gallery-img" alt="gambar 4" />
               <div class="card-body">
                 <p class="card-text text-center">Oblique view</p>
               </div>
@@ -133,7 +136,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/6.4-DE.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/6.4-DE.jpg" class="card-img-top gallery-img" alt="gambar 5" />
               <div class="card-body">
                 <p class="card-text text-center">Front view</p>
               </div>
@@ -141,7 +144,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/6.3-DE.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/6.3-DE.jpg" class="card-img-top gallery-img" alt="gambar 6" />
               <div class="card-body">
                 <p class="card-text text-center">Rear view</p>
               </div>
@@ -149,7 +152,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/6.2-DE.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/6.2-DE.jpg" class="card-img-top gallery-img" alt="gambar 7" />
               <div class="card-body">
                 <p class="card-text text-center">Side view</p>
               </div>
@@ -157,7 +160,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/6.1-DE.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/6.1-DE.jpg" class="card-img-top gallery-img" alt="gambar 8" />
               <div class="card-body">
                 <p class="card-text text-center">Oblique view</p>
               </div>
@@ -168,7 +171,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/7.1-KR1.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/7.1-KR1.jpg" class="card-img-top gallery-img" alt="gambar 9" />
               <div class="card-body">
                 <p class="card-text text-center">Front view</p>
               </div>
@@ -176,7 +179,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/7.2-KR1.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/7.2-KR1.jpg" class="card-img-top gallery-img" alt="gambar 10" />
               <div class="card-body">
                 <p class="card-text text-center">Rear view</p>
               </div>
@@ -184,7 +187,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/7.3-KR1.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/7.3-KR1.jpg" class="card-img-top gallery-img" alt="gambar 11" />
               <div class="card-body">
                 <p class="card-text text-center">Side view</p>
               </div>
@@ -192,7 +195,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/7.4-KR1.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/7.4-KR1.jpg" class="card-img-top gallery-img" alt="gambar 12" />
               <div class="card-body">
                 <p class="card-text text-center">Oblique view</p>
               </div>
@@ -203,7 +206,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/8.1-KR2.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/8.1-KR2.jpg" class="card-img-top gallery-img" alt="gambar 13" />
               <div class="card-body">
                 <p class="card-text text-center">Front view</p>
               </div>
@@ -211,7 +214,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/8.2-KR2.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/8.2-KR2.jpg" class="card-img-top gallery-img" alt="gambar 14" />
               <div class="card-body">
                 <p class="card-text text-center">Rear view</p>
               </div>
@@ -219,7 +222,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/8.3-KR2.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/8.3-KR2.jpg" class="card-img-top gallery-img" alt="gambar 15" />
               <div class="card-body">
                 <p class="card-text text-center">Oblique view</p>
               </div>
@@ -227,7 +230,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card">
-              <img src="img/Gallery/8.4-KR2.jpg" class="card-img-top" alt="..." />
+              <img src="img/Gallery/8.4-KR2.jpg" class="card-img-top gallery-img" alt="gambar 16" />
               <div class="card-body">
                 <p class="card-text text-center">Top view</p>
               </div>
@@ -331,7 +334,33 @@
       <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/kheifaauriella?igsh=NmFvdG42ZGtrbjNy" class="text-white fw-bold">Kheifa Auriella</a></p>
     </footer>
     <!-- Akhir Footer -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const galleryImage = document.querySelectorAll('.gallery-img');
+
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = 'flip-up';
+        img.dataset.aosDelay = i * 50;
+      });
+
+      AOS.init({
+        once: true,
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.p-1', { duration: 5, delay: 2, text: 'TRUZ ("True Friends") is a group of characters created by TREASURE in collaboration with LINE FRIENDS through the LINE FRIENDS CREATOR project.' });
+      gsap.from('.navbar', { duration: 1.5, y: '-100%', opacity: 0, ease: 'bounce' });
+      gsap.from('.display-4', { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: 'back' });
+      gsap.from('.lead', { duration: 1, x: -50, opacity: 0, delay: 0.8, ease: 'back' });
+    </script>
+
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbzBhz2wsKU9psIfPqo0iIdOsGqLWkZs4O3QYVvxE8-Z1LjIrFak5Oo4o2YuDyyCgTLNDg/exec';
       const form = document.forms['wpu-contact-form'];
